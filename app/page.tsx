@@ -5,6 +5,7 @@ import {
   ArrowRight,
   CalendarDays,
   Check,
+  ExternalLink,
   FileText,
   Fingerprint,
   Gavel,
@@ -70,6 +71,37 @@ const groupMembers = [
   "Erlandia Vanessa ",
   "Maria Letícia ",
   "Mirele Vicente",
+];
+
+const sources = [
+  {
+    institution: "Corte Interamericana de Direitos Humanos",
+    title: "Caso Ximenes Lopes vs. Brasil — sentença de 4 de julho de 2006",
+    scope:
+      "Fonte primária para os fatos do caso, as violações reconhecidas, a responsabilidade do Estado e as medidas de reparação.",
+    url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_149_por.pdf",
+  },
+  {
+    institution: "Planalto",
+    title: "Lei nº 10.216, de 6 de abril de 2001",
+    scope:
+      "Base legal para os direitos das pessoas com transtornos mentais, o cuidado humanizado e a excepcionalidade da internação.",
+    url: "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+  },
+  {
+    institution: "Conselho Federal de Psicologia",
+    title: "Código de Ética Profissional do Psicólogo",
+    scope:
+      "Referência para os princípios de dignidade, direitos humanos, autonomia e enfrentamento de práticas de violência.",
+    url: "https://site.cfp.org.br/wp-content/uploads/2012/07/codigo-de-etica-psicologia.pdf",
+  },
+  {
+    institution: "Ministério da Saúde",
+    title: "Rede de Atenção Psicossocial (RAPS)",
+    scope:
+      "Referência institucional para a organização do cuidado em saúde mental no território e em liberdade.",
+    url: "https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps",
+  },
 ];
 
 function SectionHeader({
@@ -189,6 +221,7 @@ export default function Page() {
           <a href="#violacoes">Direitos violados</a>
           <a href="#corte">A sentença</a>
           <a href="#legado">O legado</a>
+          <a href="#fontes">Fontes</a>
         </nav>
       </header>
 
@@ -582,6 +615,34 @@ export default function Page() {
           passa a produzir violência.
           <cite>— reflexão editorial deste arquivo</cite>
         </blockquote>
+      </section>
+
+      <section id="fontes" className="sources section-block">
+        <SectionHeader
+          number="11"
+          eyebrow="Transparência da pesquisa"
+          title="Fontes consultadas"
+        />
+        <p className="lead">
+          Esta reportagem educativa foi construída a partir dos documentos
+          abaixo. A sentença da Corte Interamericana é a fonte principal para
+          os fatos e para as conclusões jurídicas do caso.
+        </p>
+        <ol className="sources-list">
+          {sources.map((source, index) => (
+            <li key={source.url}>
+              <span className="source-number">[{index + 1}]</span>
+              <div>
+                <p className="source-institution">{source.institution}</p>
+                <h3>{source.title}</h3>
+                <p>{source.scope}</p>
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  Acessar documento <ExternalLink aria-hidden="true" />
+                </a>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <footer className="group">

@@ -983,6 +983,71 @@ a {
     monospace;
   font-style: normal;
 }
+.sources {
+  border-top: 1px solid var(--line);
+}
+.sources-list {
+  display: grid;
+  gap: 0;
+  max-width: 900px;
+  margin: 35px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.sources-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.source-number {
+  color: var(--red);
+  font:
+    700 15px "Special Elite",
+    monospace;
+}
+.source-institution {
+  margin: 0 0 5px;
+  color: var(--red);
+  font:
+    10px "Special Elite",
+    monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.sources-list h3 {
+  margin: 0;
+  font:
+    700 21px/1.25 "Playfair Display",
+    serif;
+}
+.sources-list li p:not(.source-institution) {
+  max-width: 720px;
+  margin: 8px 0 12px;
+  color: var(--muted-ink);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.sources-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--red);
+  font:
+    10px "Special Elite",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sources-list a:hover,
+.sources-list a:focus-visible {
+  text-decoration: underline;
+}
+.sources-list a svg {
+  width: 14px;
+}
 .group {
   padding: 65px max(24px, calc((100% - 1120px) / 2)) 25px;
   background: #26221f;

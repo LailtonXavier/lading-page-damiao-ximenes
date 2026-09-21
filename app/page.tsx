@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InstitutionMap from "@/components/InstitutionMap";
 import {
   ArrowDown,
   ArrowRight,
@@ -64,10 +65,11 @@ const timeline = [
 ];
 
 const groupMembers = [
-  "Maria Leticia da silva",
-  "Nome do integrante 2",
-  "Nome do integrante 3",
-  "Nome do integrante 4",
+  "Ana Gabriela",
+  "Deise francielly",
+  "Erlandia Vanessa ",
+  "Maria Letícia ",
+  "Mirele Vicente",
 ];
 
 function SectionHeader({
@@ -148,7 +150,7 @@ function PlaceholderPhoto3({
 }) {
   return (
     <figure className="photo-placeholder">
-      <div>
+      <div className="photo-inner">
         <Image
           src="/torut.png"
           alt="Dami-o-Ximenes"
@@ -334,6 +336,8 @@ export default function Page() {
           <PlaceholderPhoto3 label="FOTOGRAFIA " caption="" />
         </div>
       </section>
+
+      <InstitutionMap />
 
       <section id="violacoes" className="section-block">
         <SectionHeader
@@ -587,8 +591,8 @@ export default function Page() {
             <p className="eyebrow">NOSSO GRUPO</p>
             <h2>Integrantes do grupo</h2>
             <p>
-              Trabalho desenvolvido para a disciplina de Psicologia da Faculdade
-              Nova Roma.
+              Trabalho desenvolvido para a disciplina de Psicologia Jurídica da
+              Faculdade Nova Roma.
             </p>
           </div>
         </div>

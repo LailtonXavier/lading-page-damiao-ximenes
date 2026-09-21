@@ -75,11 +75,17 @@ type Room = (typeof rooms)[number] & {
   hit?: { x: number; y: number };
 };
 
+const getInitialMapScale = () =>
+  typeof window !== "undefined" &&
+  window.matchMedia("(max-width: 760px)").matches
+    ? 0.72
+    : 1.12;
+
 export default function InstitutionMap() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [selected, setSelected] = useState(0);
   const [angle, setAngle] = useState(-0.68);
-  const [scale, setScale] = useState(1.12);
+  const [scale, setScale] = useState(getInitialMapScale);
   const [autoRotate, setAutoRotate] = useState(false);
   const angleRef = useRef(angle);
   const scaleRef = useRef(scale);
@@ -409,7 +415,7 @@ export default function InstitutionMap() {
             type="button"
             onClick={() => {
               setAngle(-0.68);
-              setScale(1.12);
+              setScale(getInitialMapScale());
               setSelected(0);
             }}
           >

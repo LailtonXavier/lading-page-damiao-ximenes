@@ -102,6 +102,14 @@ const sources = [
       "Referência institucional para a organização do cuidado em saúde mental no território e em liberdade.",
     url: "https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps",
   },
+  {
+    institution: "Escola Nacional de Administração Pública (ENAP)",
+    title:
+      "Direitos Humanos e Saúde Mental – Curso Permanente Damião Ximenes Lopes",
+    scope:
+      "Curso gratuito elaborado pelo Ministério dos Direitos Humanos e da Cidadania, criado a partir do caso Damião Ximenes Lopes e da relação entre saúde mental, direitos humanos e cuidado em saúde.",
+    url: "https://www.escolavirtual.gov.br/",
+  },
 ];
 
 function SectionHeader({
@@ -564,6 +572,13 @@ export default function Page() {
             reforçou a urgência de aplicar efetivamente seus princípios e
             substituir o modelo manicomial por práticas de cuidado dignas.
           </p>
+          <p>
+            Esse legado também se transforma em formação continuada. A ENAP
+            oferece gratuitamente o curso “Direitos Humanos e Saúde Mental –
+            Curso Permanente Damião Ximenes Lopes”, elaborado pelo Ministério
+            dos Direitos Humanos e da Cidadania a partir do caso e da relação
+            entre saúde mental, direitos humanos e cuidado em saúde.
+          </p>
         </div>
       </section>
 
@@ -625,8 +640,8 @@ export default function Page() {
         />
         <p className="lead">
           Esta reportagem educativa foi construída a partir dos documentos
-          abaixo. A sentença da Corte Interamericana é a fonte principal para
-          os fatos e para as conclusões jurídicas do caso.
+          abaixo. A sentença da Corte Interamericana é a fonte principal para os
+          fatos e para as conclusões jurídicas do caso.
         </p>
         <ol className="sources-list">
           {sources.map((source, index) => (
